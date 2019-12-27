@@ -35,13 +35,15 @@ public class PrakingLotTest {
         Assert.assertEquals(true,isFull);
     }
 
+
+
+
+    //Airport Security
     @Test
-    public void givenParkingLot_isNotFull_shouldReturnFalse(){
-        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
-        boolean isFull=parkingLotOwner.lotSize(new Object());
+    public void givenParkingLot_IsFullShouldReturnTrue_airportSecurity(){
+        AirportSecurity airportSecurity=new AirportSecurity();
+        boolean isFull=airportSecurity.lotSize(new Object());
         Assert.assertEquals(true,isFull);
     }
 
-
-    //
 }
