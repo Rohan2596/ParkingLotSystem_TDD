@@ -12,4 +12,11 @@ public class PrakingLotTest {
        String message=parkingLot.greetingMessage();
         Assert.assertEquals("Welcome",message);
     }
+
+    @Test
+    public void givenVehicle_parking_ShouldReturnTrue(){
+        parkingLot=new ParkingLot();
+        boolean isParked=parkingLot.parking(new Object());
+        Assert.assertEquals(true,isParked);
+    }
 }
