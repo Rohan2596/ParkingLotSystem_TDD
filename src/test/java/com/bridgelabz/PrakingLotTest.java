@@ -4,26 +4,44 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class PrakingLotTest {
-    ParkingLot parkingLot;
+    ParkingLotSystem parkingLotSystem;
 
     @Test
     public void givenGreetingMessage_ShouldReturn_WelcomeMessage(){
-        parkingLot=new ParkingLot();
-       String message=parkingLot.greetingMessage();
+        parkingLotSystem =new ParkingLotSystem();
+       String message= parkingLotSystem.greetingMessage();
         Assert.assertEquals("Welcome",message);
     }
 
     @Test
     public void givenVehicle_parking_ShouldReturnTrue(){
-        parkingLot=new ParkingLot();
-        boolean isParked=parkingLot.parking(new Object());
+        parkingLotSystem =new ParkingLotSystem();
+        boolean isParked= parkingLotSystem.parking(new Object());
         Assert.assertEquals(true,isParked);
     }
 
     @Test
     public void givenVehicle_unparking_ShouldReturnTrue(){
-        parkingLot=new ParkingLot();
-        boolean isParked=parkingLot.unparking(new Object());
+        parkingLotSystem =new ParkingLotSystem();
+        boolean isParked= parkingLotSystem.unparking(new Object());
         Assert.assertEquals(true,isParked);
     }
+
+//    Parking Lot Owner
+    @Test
+    public void givenParkingLot_IsFull_ShouldReturnTrue(){
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+        boolean isFull=parkingLotOwner.lotSize(new Object());
+        Assert.assertEquals(true,isFull);
+    }
+
+    @Test
+    public void givenParkingLot_isNotFull_shouldReturnFalse(){
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+        boolean isFull=parkingLotOwner.lotSize(new Object());
+        Assert.assertEquals(true,isFull);
+    }
+
+
+    //
 }

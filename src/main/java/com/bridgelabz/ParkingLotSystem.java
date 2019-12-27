@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class ParkingLot {
+public class ParkingLotSystem {
     public String greetingMessage() {
         return "Welcome";
     }
