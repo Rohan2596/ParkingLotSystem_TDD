@@ -19,4 +19,11 @@ public class PrakingLotTest {
         boolean isParked=parkingLot.parking(new Object());
         Assert.assertEquals(true,isParked);
     }
+
+    @Test
+    public void givenVehicle_unparking_ShouldReturnTrue(){
+        parkingLot=new ParkingLot();
+        boolean isParked=parkingLot.unparking(new Object());
+        Assert.assertEquals(true,isParked);
+    }
 }
