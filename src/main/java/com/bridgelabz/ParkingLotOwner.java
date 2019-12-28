@@ -8,4 +8,10 @@ public class ParkingLotOwner {
         return false;
     }
 
+    public boolean emptySize(Object vehicle) {
+        ParkingLotSystem parkingLotSystem=new ParkingLotSystem();
+        boolean conditions=parkingLotSystem.unparking(vehicle);
+        if(conditions==true){return true;}
+        return false;
+    }
 }

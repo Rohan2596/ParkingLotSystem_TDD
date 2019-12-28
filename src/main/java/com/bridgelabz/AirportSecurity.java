@@ -7,4 +7,12 @@ public class AirportSecurity {
         if(conditions==true){return true;}
         return false;
     }
+
+    public boolean lotEmpty(Object vehicle) {
+        ParkingLotSystem parkingLotSystem=new ParkingLotSystem();
+        boolean conditions=parkingLotSystem.unparking(vehicle);
+        if(conditions==true){return true;}
+        return false;
+
+    }
 }

@@ -1,0 +1,10 @@
+user.name=Rohan2596
+user.email=rohankadam662@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/Rohan2596/ParkingLotSystem_TDD.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master

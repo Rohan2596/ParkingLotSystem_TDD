@@ -35,6 +35,12 @@ public class PrakingLotTest {
         Assert.assertEquals(true,isFull);
     }
 
+    @Test
+    public void givenParkingLot_IsNotFull_ShouldReturnTrue(){
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+        boolean isFull=parkingLotOwner.emptySize(new Object());
+        Assert.assertEquals(true,isFull);
+    }
 
 
 
@@ -45,5 +51,14 @@ public class PrakingLotTest {
         boolean isFull=airportSecurity.lotSize(new Object());
         Assert.assertEquals(true,isFull);
     }
+
+    @Test
+    public void givenParkingLot_isNotFull_ShouldReturnTrue_airportSecurity(){
+        AirportSecurity airportSecurity=new AirportSecurity();
+        boolean isNotFull=airportSecurity.lotEmpty(new Object());
+        Assert.assertEquals(true,isNotFull);
+    }
+
+
 
 }
