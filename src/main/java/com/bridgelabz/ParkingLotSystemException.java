@@ -4,7 +4,7 @@ public class ParkingLotSystemException extends Exception {
 
     private String exceptionMessage;
    enum  ExceptionTypes{
-       PARKING_LOT_FULL
+       PARKING_LOT_FULL,NOT_FOUND,NULL_POINTER
    }
     ExceptionTypes exceptionTypes;
     public ParkingLotSystemException(String exceptionMessage) {

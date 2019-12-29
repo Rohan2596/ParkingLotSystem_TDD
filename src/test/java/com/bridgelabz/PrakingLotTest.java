@@ -21,10 +21,13 @@ public class PrakingLotTest {
     }
 
     @Test
-    public void givenVehicle_unparking_ShouldReturnTrue(){
+    public void givenVehicle_unparking_ShouldReturnTrue() throws ParkingLotSystemException {
+       try{
         parkingLotSystem =new ParkingLotSystem();
         boolean isParked= parkingLotSystem.unparking(new Object());
         Assert.assertEquals(true,isParked);
+    }catch (ParkingLotSystemException e){
+       Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);}
     }
 
 //    Parking Lot Owner
@@ -57,12 +60,11 @@ public class PrakingLotTest {
 
         } catch (ParkingLotSystemException e) {
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-
         }
     }
 
     @Test
-    public void givenParkingLot_FindCar(){
+    public void givenParkingLot_FindingCar_ForDriver(){
         try {
             parkingLotSystem = new ParkingLotSystem();
             parkingLotSystem.find(new Object());
@@ -71,5 +73,8 @@ public class PrakingLotTest {
 
         }
     }
+
+
+
 
 }

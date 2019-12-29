@@ -4,36 +4,38 @@ public class ParkingLotSystem {
     public String greetingMessage() {
         return "Welcome";
     }
-    ParkingAttendant parkingAttendant;
-    private Object vehicle;
 
     public Boolean parking(Object vehicle) throws ParkingLotSystemException {
-//        this.vehicle=vehicle;
-
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
         try {
             parkingLotOwner.parking(vehicle);
+            return true;
         } catch (ParkingLotSystemException e) {
             throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
         }
-        return true;
     }
 
-    public Boolean unparking(Object vehicle){
-        this.vehicle=null;
-        parkingAttendant=new ParkingAttendant();
-        parkingAttendant.unparking(vehicle);
-        return true;
+    public Boolean unparking(Object vehicle) throws ParkingLotSystemException {
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+        try {
+            parkingLotOwner.unparking(vehicle);
+            return true;
+        } catch (ParkingLotSystemException e) {
+            throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+
     }
 
 
     public boolean find(Object vehicle) throws ParkingLotSystemException {
-        parkingAttendant=new ParkingAttendant();
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+
         try {
-            parkingAttendant.find(vehicle);
+            parkingLotOwner.find(vehicle);
+            return true;
         } catch (ParkingLotSystemException e) {
-            throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+            throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
         }
-        return true;
+
     }
 }

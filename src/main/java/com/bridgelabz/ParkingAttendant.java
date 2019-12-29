@@ -6,12 +6,10 @@ import java.util.Map;
 public class ParkingAttendant {
 
     public boolean parking(Object vehicle) throws ParkingLotSystemException {
-
         Slots slots=Slots.getSlots();
         if(slots.getCount()!=2) {
             slots.getMap().put("1", vehicle);
             slots.setCount();
-            System.out.println("HIi");
             System.out.println(slots.getCount());
             return true;
         }
@@ -20,10 +18,13 @@ public class ParkingAttendant {
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
     }
 
-    public boolean unparking(Object vehicle) {
+    public boolean unparking(Object vehicle) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
-        slots.getMap().remove("1",vehicle);
-        return true;
+        while (slots.getMap().equals(vehicle)) {
+            slots.getMap().remove(vehicle);
+            return true;
+        }
+        throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
     }
 
     public void display(Map<String, Object> map){
@@ -40,6 +41,6 @@ public class ParkingAttendant {
 
             if(slots.getMap().get(i).equals(vehicle))return true;
         }
-        throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+        throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
     }
 }
