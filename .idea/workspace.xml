@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45008cc3-651f-4ce9-bcf9-364411903b1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/SignInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingAttendant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystemException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/Slots.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/AirportSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/AirportSecurity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/ParkingLotOwner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/ParkingLotOwner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/ParkingLotSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/ParkingLotSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/SignInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/SignInformation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/bridgelabz/PrakingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/bridgelabz/PrakingLotTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.PrakingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.PrakingLotTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.PrakingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.PrakingLotTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/SignInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/SignInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/PrakingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/PrakingLotTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,13 +73,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.bridgelabz" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PrakingLotTest.givenParkingLot_IsFullShouldReturnTrue_airportSecurity">
+  <component name="RunManager" selected="Gradle.PrakingLotTest.givenParkingLot_FindCar">
     <configuration name="PrakingLotTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -78,12 +103,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PrakingLotTest.givenParkingLot_IsFullShouldReturnTrue_airportSecurity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PrakingLotTest.givenParKinglot_parkingDecisionsOnWhere" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenParkingLot_IsFullShouldReturnTrue_airportSecurity&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenParKinglot_parkingDecisionsOnWhere&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -98,12 +123,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PrakingLotTest.givenParkingLot_IsFull_ShouldReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PrakingLotTest.givenParkingLot_FindCar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenParkingLot_IsFull_ShouldReturnTrue&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenParkingLot_FindCar&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -118,12 +143,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PrakingLotTest.givenParkingLot_isNotFull_ShouldReturnTrue_airportSecurity" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PrakingLotTest.givenVehicle_parking_ShouldReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenParkingLot_isNotFull_ShouldReturnTrue_airportSecurity&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenVehicle_parking_ShouldReturnTrue&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -138,12 +163,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="PrakingLotTest.givenParkingLot_isNotFull_shouldReturnFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PrakingLotTest.givenVehicle_unparking_ShouldReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenParkingLot_isNotFull_shouldReturnFalse&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.PrakingLotTest.givenVehicle_unparking_ShouldReturnTrue&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -160,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PrakingLotTest.givenParkingLot_IsFullShouldReturnTrue_airportSecurity" />
+        <item itemvalue="Gradle.PrakingLotTest.givenParkingLot_FindCar" />
+        <item itemvalue="Gradle.PrakingLotTest.givenParKinglot_parkingDecisionsOnWhere" />
+        <item itemvalue="Gradle.PrakingLotTest.givenVehicle_parking_ShouldReturnTrue" />
+        <item itemvalue="Gradle.PrakingLotTest.givenVehicle_unparking_ShouldReturnTrue" />
         <item itemvalue="Gradle.PrakingLotTest" />
-        <item itemvalue="Gradle.PrakingLotTest.givenParkingLot_isNotFull_ShouldReturnTrue_airportSecurity" />
-        <item itemvalue="Gradle.PrakingLotTest.givenParkingLot_isNotFull_shouldReturnFalse" />
-        <item itemvalue="Gradle.PrakingLotTest.givenParkingLot_IsFull_ShouldReturnTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -194,46 +219,54 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="803" y="272" width="544" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1577338081384">
+    <state x="590" y="215" width="847" height="684" key="#Project_Structure" timestamp="1577526127611">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="803" y="272" width="544" height="583" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1577338081384" />
+    <state x="590" y="215" width="847" height="684" key="#Project_Structure/70.27.1850.1053@70.27.1850.1053" timestamp="1577526127611" />
+    <state x="803" y="272" width="544" height="583" key="#com.intellij.ide.util.MemberChooser" timestamp="1577530437276">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="803" y="272" width="544" height="583" key="#com.intellij.ide.util.MemberChooser/70.27.1850.1053@70.27.1850.1053" timestamp="1577530437276" />
     <state x="90" y="27" width="874" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577443209801">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="90" y="27" width="874" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1577443209801" />
-    <state width="869" height="275" key="GridCell.Tab.0.bottom" timestamp="1577511237283">
+    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1577529560558">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="869" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577511237283" />
-    <state width="869" height="275" key="GridCell.Tab.0.center" timestamp="1577511237282">
+    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1577529560558" />
+    <state width="879" height="275" key="GridCell.Tab.0.bottom" timestamp="1577536471570">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="869" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577511237282" />
-    <state width="869" height="275" key="GridCell.Tab.0.left" timestamp="1577511237282">
+    <state width="879" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577536471570" />
+    <state width="879" height="275" key="GridCell.Tab.0.center" timestamp="1577536471568">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="869" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577511237282" />
-    <state width="869" height="275" key="GridCell.Tab.0.right" timestamp="1577511237282">
+    <state width="879" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577536471568" />
+    <state width="879" height="275" key="GridCell.Tab.0.left" timestamp="1577536471568">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="869" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577511237282" />
-    <state width="879" height="340" key="GridCell.Tab.1.bottom" timestamp="1577454139541">
+    <state width="879" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577536471568" />
+    <state width="879" height="275" key="GridCell.Tab.0.right" timestamp="1577536471569">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="340" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577454139541" />
-    <state width="879" height="340" key="GridCell.Tab.1.center" timestamp="1577454139540">
+    <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577536471569" />
+    <state width="1804" height="340" key="GridCell.Tab.1.bottom" timestamp="1577529562397">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="340" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577454139540" />
-    <state width="879" height="340" key="GridCell.Tab.1.left" timestamp="1577454139540">
+    <state width="1804" height="340" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577529562397" />
+    <state width="1804" height="340" key="GridCell.Tab.1.center" timestamp="1577529562397">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="340" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577454139540" />
-    <state width="879" height="340" key="GridCell.Tab.1.right" timestamp="1577454139540">
+    <state width="1804" height="340" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577529562397" />
+    <state width="1804" height="340" key="GridCell.Tab.1.left" timestamp="1577529562397">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="340" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577454139540" />
+    <state width="1804" height="340" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577529562397" />
+    <state width="1804" height="340" key="GridCell.Tab.1.right" timestamp="1577529562397">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577529562397" />
     <state x="766" y="336" width="446" height="447" key="chooseDestDirectoryDialog" timestamp="1577440047821">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -251,9 +284,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/PrakingLotTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -14,7 +14,7 @@ public class PrakingLotTest {
     }
 
     @Test
-    public void givenVehicle_parking_ShouldReturnTrue(){
+    public void givenVehicle_parking_ShouldReturnTrue() throws ParkingLotSystemException {
         parkingLotSystem =new ParkingLotSystem();
         boolean isParked= parkingLotSystem.parking(new Object());
         Assert.assertEquals(true,isParked);
@@ -29,7 +29,7 @@ public class PrakingLotTest {
 
 //    Parking Lot Owner
     @Test
-    public void givenParkingLot_IsFull_ShouldReturnTrue(){
+    public void givenParkingLot_IsFull_ShouldReturnTrue() throws ParkingLotSystemException {
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
         boolean isFull=parkingLotOwner.lotSize(new Object());
         Assert.assertEquals(true,isFull);
@@ -37,12 +37,39 @@ public class PrakingLotTest {
 
     //Airport Security
     @Test
-    public void givenParkingLot_IsFullShouldReturnTrue_airportSecurity(){
+    public void givenParkingLot_IsFullShouldReturnTrue_airportSecurity() throws ParkingLotSystemException {
         AirportSecurity airportSecurity=new AirportSecurity();
         boolean isFull=airportSecurity.lotSize(new Object());
         Assert.assertEquals(true,isFull);
     }
 
 
+    @Test
+    public void givenParKinglot_parkingDecisionsOnWhere() {
+        try {
+            parkingLotSystem = new ParkingLotSystem();
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+
+        } catch (ParkingLotSystemException e) {
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+
+        }
+    }
+
+    @Test
+    public void givenParkingLot_FindCar(){
+        try {
+            parkingLotSystem = new ParkingLotSystem();
+            parkingLotSystem.find(new Object());
+        } catch (ParkingLotSystemException e) {
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+
+        }
+    }
 
 }
