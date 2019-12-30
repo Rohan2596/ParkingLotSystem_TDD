@@ -40,4 +40,15 @@ public class ParkingLotSystem {
     }
 
 
+    public boolean allocationLots(Vehicle vehicle) throws ParkingLotSystemException {
+        ParkingAttendant attendant=new ParkingAttendant();
+
+        try {
+            attendant.allocation(vehicle);
+            return true;
+        } catch (ParkingLotSystemException e) {
+            throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+
+    }
 }

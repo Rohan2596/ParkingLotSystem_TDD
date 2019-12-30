@@ -93,6 +93,24 @@ public class PrakingLotTest {
         }
     }
 
+    @Test
+    public void givenParkingSystem_Distibution(){
+        try {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem=new ParkingLotSystem();
+
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+
+        }catch (ParkingLotSystemException e){
+            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+
+    }
+
 
 
 
