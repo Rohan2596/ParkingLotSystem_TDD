@@ -13,7 +13,7 @@ public boolean parking(Object vehicle) throws ParkingLotSystemException {
 }
 
 
-    public boolean unparking(Object vehicle) throws ParkingLotSystemException {
+    public boolean unparking(Vehicle vehicle) throws ParkingLotSystemException {
         try {
             ParkingAttendant parkingAttendant = new ParkingAttendant();
             parkingAttendant.unparking(vehicle);

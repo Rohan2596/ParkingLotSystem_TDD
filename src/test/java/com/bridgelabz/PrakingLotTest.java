@@ -3,6 +3,8 @@ package com.bridgelabz;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
+
 public class PrakingLotTest {
     ParkingLotSystem parkingLotSystem;
 
@@ -23,8 +25,10 @@ public class PrakingLotTest {
     @Test
     public void givenVehicle_unparking_ShouldReturnTrue() throws ParkingLotSystemException {
        try{
+           Vehicle vehicle = new Vehicle();
+           vehicle.setDateTime(LocalDateTime.now());
         parkingLotSystem =new ParkingLotSystem();
-        boolean isParked= parkingLotSystem.unparking(new Object());
+        boolean isParked= parkingLotSystem.unparking(vehicle);
         Assert.assertEquals(true,isParked);
     }catch (ParkingLotSystemException e){
        Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);}
@@ -71,6 +75,21 @@ public class PrakingLotTest {
         } catch (ParkingLotSystemException e) {
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
 
+        }
+
+    }
+
+    @Test
+    public void givenParkingLot_ChargingVehicle(){
+        try {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem=new ParkingLotSystem();
+            parkingLotSystem.parking(vehicle);
+           boolean conditions=parkingLotSystem.unparking(vehicle);
+            Assert.assertEquals(true,conditions);
+        }catch (ParkingLotSystemException e){
+            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
         }
     }
 

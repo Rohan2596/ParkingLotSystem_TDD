@@ -15,7 +15,7 @@ public class ParkingLotSystem {
         }
     }
 
-    public Boolean unparking(Object vehicle) throws ParkingLotSystemException {
+    public Boolean unparking(Vehicle vehicle) throws ParkingLotSystemException {
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
         try {
             parkingLotOwner.unparking(vehicle);
@@ -38,4 +38,6 @@ public class ParkingLotSystem {
         }
 
     }
+
+
 }
