@@ -15,6 +15,8 @@ public class ParkingLotSystem {
         }
     }
 
+
+
     public Boolean unparking(Vehicle vehicle) throws ParkingLotSystemException {
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
         try {
@@ -27,11 +29,11 @@ public class ParkingLotSystem {
     }
 
 
-    public boolean find(Object vehicle) throws ParkingLotSystemException {
+    public boolean find(Integer Key) throws ParkingLotSystemException {
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
 
         try {
-            parkingLotOwner.find(vehicle);
+            parkingLotOwner.find(Key);
             return true;
         } catch (ParkingLotSystemException e) {
             throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
@@ -41,14 +43,14 @@ public class ParkingLotSystem {
 
 
     public boolean allocationLots(Vehicle vehicle) throws ParkingLotSystemException {
-        ParkingAttendant attendant=new ParkingAttendant();
-
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
         try {
-            attendant.allocation(vehicle);
+            parkingLotOwner.allocation(vehicle);
             return true;
         } catch (ParkingLotSystemException e) {
             throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
         }
 
     }
+
 }

@@ -3,8 +3,9 @@ package com.bridgelabz;
 public class ParkingLotSystemException extends Exception {
 
     private String exceptionMessage;
-   enum  ExceptionTypes{
-       PARKING_LOT_FULL,NOT_FOUND,NULL_POINTER
+
+    enum  ExceptionTypes{
+       PARKING_LOT_FULL,NOT_FOUND
    }
     ExceptionTypes exceptionTypes;
     public ParkingLotSystemException(String exceptionMessage) {

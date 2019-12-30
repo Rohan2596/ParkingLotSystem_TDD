@@ -71,7 +71,7 @@ public class ParkingLotTest {
     public void givenParkingLot_FindingCar_ForDriver(){
         try {
             parkingLotSystem = new ParkingLotSystem();
-            parkingLotSystem.find(new Object());
+            parkingLotSystem.find(1);
         } catch (ParkingLotSystemException e) {
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
 
@@ -116,7 +116,7 @@ public class ParkingLotTest {
         try {
             parkingLotSystem = new ParkingLotSystem();
 
-           boolean checkingSpace=parkingLotSystem.find(new Object());
+           boolean checkingSpace=parkingLotSystem.find(1);
            if(checkingSpace==true){
                boolean co=parkingLotSystem.parking(new Object());
                Assert.assertEquals(true,co);

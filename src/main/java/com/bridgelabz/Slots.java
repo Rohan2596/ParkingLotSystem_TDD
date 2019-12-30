@@ -9,7 +9,7 @@ public class Slots {
 
 private  static Slots slots=null;
 
-private  Map<String ,Object> map=null;
+private  Map<Integer ,Object> map=null;
 private Slots(){
 map=new HashMap<>(2);
 
@@ -20,7 +20,7 @@ public static Slots getSlots(){
     }
     return slots;
 }
-public Map<String,Object> getMap(){
+public Map<Integer,Object> getMap(){
     return this.map;
 }
 private static int count;
@@ -30,11 +30,6 @@ public void setCount(){
 public int getCount(){
     return count;
 }
-public void addToMap(Object object){
-    map.put("1",object);
-}
-public void removeToMap(Object object){
-    map.remove(object);
-}
+
 }
 
