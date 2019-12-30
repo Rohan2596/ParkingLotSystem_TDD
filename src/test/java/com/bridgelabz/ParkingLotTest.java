@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.time.LocalDateTime;
 
-public class PrakingLotTest {
+public class ParkingLotTest {
     ParkingLotSystem parkingLotSystem;
 
     @Test
@@ -23,7 +23,7 @@ public class PrakingLotTest {
     }
 
     @Test
-    public void givenVehicle_unparking_ShouldReturnTrue() throws ParkingLotSystemException {
+    public void givenVehicle_unparking_ShouldReturnTrue() {
        try{
            Vehicle vehicle = new Vehicle();
            vehicle.setDateTime(LocalDateTime.now());
@@ -111,6 +111,23 @@ public class PrakingLotTest {
 
     }
 
+    @Test
+    public void givenParkingLot_FindingSpace_ForHandiCamp(){
+        try {
+            parkingLotSystem = new ParkingLotSystem();
+
+           boolean checkingSpace=parkingLotSystem.find(new Object());
+           if(checkingSpace==true){
+               boolean co=parkingLotSystem.parking(new Object());
+               Assert.assertEquals(true,co);
+           };
+
+        } catch (ParkingLotSystemException e) {
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+
+        }
+
+    }
 
 
 
