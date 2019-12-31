@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-31T08:09:29" hostname="abc-Lenovo-V130-15IKB" time="0.014">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-31T10:09:27" hostname="abc-Lenovo-V130-15IKB" time="0.017">
   <properties/>
-  <testcase name="givenParkingSystem_DistributionEvenlys" classname="com.bridgelabz.ParkingLotTest" time="0.014"/>
+  <testcase name="givenParkingLot_FindingSpace_ForHandCap" classname="com.bridgelabz.ParkingLotTest" time="0.017"/>
   <system-out><![CDATA[1
 Parking att:-1
 com.bridgelabz.Vehicle@35892bf3

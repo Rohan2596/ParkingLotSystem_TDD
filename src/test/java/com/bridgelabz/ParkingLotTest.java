@@ -181,26 +181,26 @@ public class ParkingLotTest {
             Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
         }
     }
-//
-//    @Test
-//    public void givenParkingLot_FindingSpace_ForHandCap(){
-//        try {
-//            Vehicle vehicle = new Vehicle();
-//            vehicle.setDateTime(LocalDateTime.now());
-//
-//            parkingLotSystem = new ParkingLotSystem();
-//            parkingLotSystem.allocationLots(vehicle);
-//            parkingLotSystem.allocationLots(vehicle);
-//
-//           boolean checkingSpace=parkingLotSystem.find();
-//           Assert.assertEquals(true,checkingSpace);
-//
-//        } catch (ParkingLotSystemException e) {
-//            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-//
-//        }
-//
-//    }
+
+    @Test
+    public void givenParkingLot_FindingSpace_ForHandCap(){
+        try {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem = new ParkingLotSystem();
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            boolean checkingSpace=parkingLotSystem.find();
+           Assert.assertEquals(true,checkingSpace);
+
+        } catch (ParkingLotSystemException e) {
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+
+        }
+
+    }
 
 
 
