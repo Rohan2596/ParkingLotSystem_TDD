@@ -123,67 +123,64 @@ public class ParkingLotTest {
         }catch (ParkingLotSystemException e){
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);}
     }
-//
-//
-//    @Test
-//    public void givenParKinglot_parkingDecisionsOnWhere() {
-//        try {
-//            parkingLotSystem = new ParkingLotSystem();
-//            parkingLotSystem.parking(new Object());
-//            parkingLotSystem.parking(new Object());
-//            parkingLotSystem.parking(new Object());
-//            parkingLotSystem.parking(new Object());
-//            parkingLotSystem.parking(new Object());
-//            parkingLotSystem.parking(new Object());
-//
-//        } catch (ParkingLotSystemException e) {
-//            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-//        }
-//    }
-//
-//    @Test
-//    public void givenParkingLot_FindingCar_ForDriver(){
-//        try {
-//            parkingLotSystem = new ParkingLotSystem();
-//            parkingLotSystem.find(1);
-//        } catch (ParkingLotSystemException e) {
-//            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-//
-//        }
-//
-//    }
-//
-//    @Test
-//    public void givenParkingLot_ChargingVehicle(){
-//        try {
-//            Vehicle vehicle = new Vehicle();
-//            vehicle.setDateTime(LocalDateTime.now());
-//            parkingLotSystem=new ParkingLotSystem();
-//            parkingLotSystem.parking(vehicle);
-//           boolean conditions=parkingLotSystem.unparking(vehicle);
-//            Assert.assertEquals(true,conditions);
-//        }catch (ParkingLotSystemException e){
-//            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-//        }
-//    }
-//
-//    @Test
-//    public void givenParkingSystem_Distibution(){
-//        try {
-//            Vehicle vehicle = new Vehicle();
-//            vehicle.setDateTime(LocalDateTime.now());
-//            parkingLotSystem=new ParkingLotSystem();
-//
-//            parkingLotSystem.allocationLots(vehicle);
-//            parkingLotSystem.allocationLots(vehicle);
-//            parkingLotSystem.allocationLots(vehicle);
-//            parkingLotSystem.allocationLots(vehicle);
-//
-//        }catch (ParkingLotSystemException e){
-//            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-//        }
-//
-//    }
+
+    @Test
+    public void givenParKinglot_parkingDecisionsOnWhere_ToParkLot() {
+        try {
+            parkingLotSystem = new ParkingLotSystem();
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+            parkingLotSystem.parking(new Object());
+        } catch (ParkingLotSystemException e) {
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+        }
+    }
+
+    @Test
+    public void givenParkingLot_FindingCar_ForDriver(){
+        try {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem = new ParkingLotSystem();
+            parkingLotSystem.parking(vehicle);
+            parkingLotSystem.find(1);
+        } catch (ParkingLotSystemException e) {
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+
+        }
+
+    }
+
+    @Test
+    public void givenParkingLot_ChargingVehicle(){
+        try {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem=new ParkingLotSystem();
+          boolean charged =parkingLotSystem.parking(vehicle);
+            Assert.assertEquals(true,charged);
+        }catch (ParkingLotSystemException e){
+            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+    }
+
+    @Test
+    public void givenParkingSystem_DistributionEvenlys(){
+        try {
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem=new ParkingLotSystem();
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+            parkingLotSystem.allocationLots(vehicle);
+        }catch (ParkingLotSystemException e){
+            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+    }
 //
 //    @Test
 //    public void givenParkingLot_FindingSpace_ForHandCap(){

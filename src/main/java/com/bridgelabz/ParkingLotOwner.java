@@ -75,9 +75,8 @@ public class ParkingLotOwner  implements LotInformationObserver {
     public boolean find(Integer key) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
 
-        for(int i=0;i<10;i++){
+        for(int i=0;i<=slots.getCount();i++){
             System.out.println(slots.getMap().get(i));
-
             if(slots.getMap().containsKey(key))return true;
         }
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
