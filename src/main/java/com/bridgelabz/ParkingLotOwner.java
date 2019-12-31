@@ -3,13 +3,12 @@ package com.bridgelabz;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-public class ParkingLotOwner  implements SignInformation{
+public class ParkingLotOwner  implements LotInformationObserver {
     private static int lots=3;
-
+    public boolean isFull=true;
     public void allocation(Object vehicle) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
         display(slots.getMap());
-
         if(lots !=2){
             slots.getMap().put(1,vehicle);
             parking(vehicle);
@@ -24,31 +23,30 @@ public class ParkingLotOwner  implements SignInformation{
             lots=1;}
 
     }
-public  boolean parking(Object vehicle) throws ParkingLotSystemException {
-    Slots slots=Slots.getSlots();
 
-    if(slots.getCount()!=10) {
+    public  boolean parking(Object vehicle) throws ParkingLotSystemException {
+        Slots slots=Slots.getSlots();
 
-        slots.getMap().put(slots.getCount(), vehicle);
-        slots.setCount();
-        System.out.println(slots.getCount());
-        return true;
+        if (isFull==true &&slots.getCount()!=2) {
+            slots.getMap().put(slots.getCount(), vehicle);
+            slots.setCount();
+            System.out.println(slots.getCount());
+            return true;
+        }
+        availabilityParkingSlot(false);
 
+        throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
     }
-    System.out.println(slots.getCount());
-    throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-
-}
 
 
-    public boolean unparking(Vehicle vehicle) throws ParkingLotSystemException {
+    public boolean unparking(int vehicle) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
         System.out.println(Slots.getSlots().toString());
-        while (slots.getMap().containsKey(1)) {
-            System.out.println(slots.getMap().containsValue(vehicle));
-            charging(true,vehicle.getDateTime());
+        while (slots.getMap().containsKey(vehicle)) {
+            System.out.println(slots.getMap().containsKey(vehicle));
+//            charging(true,vehicle.getDateTime());
             slots.getMap().remove(vehicle);
-
+            availabilityParkingSlot(true);
             return true;
         }
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
@@ -77,7 +75,7 @@ public  boolean parking(Object vehicle) throws ParkingLotSystemException {
     public boolean find(Integer key) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
 
-        for(int i=0;i<slots.getMap().size();i++){
+        for(int i=0;i<10;i++){
             System.out.println(slots.getMap().get(i));
 
             if(slots.getMap().containsKey(key))return true;
@@ -85,4 +83,16 @@ public  boolean parking(Object vehicle) throws ParkingLotSystemException {
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
     }
 
+    public boolean find() throws ParkingLotSystemException {
+
+        Slots slots=Slots.getSlots();
+
+        for(int i=0;i<=slots.getMap().size();i++){
+            System.out.println(slots.getMap().get(i));
+
+            if(slots.getMap().containsValue(null))return true;
+        }
+        throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+
+    }
 }

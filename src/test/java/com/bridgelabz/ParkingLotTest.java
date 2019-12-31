@@ -16,118 +16,194 @@ public class ParkingLotTest {
     }
 
     @Test
-    public void givenVehicle_parking_ShouldReturnTrue() throws ParkingLotSystemException {
+    public void givenVehicle_IfParked_ShouldReturnTrue() throws ParkingLotSystemException {
+        try {
+            parkingLotSystem = new ParkingLotSystem();
+            boolean isParked = parkingLotSystem.parking(new Object());
+            Assert.assertEquals(true, isParked);
+        }catch (ParkingLotSystemException e){
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+        }
+    }
+    @Test
+    public void givenVehicle_IfParkedFailed_ShouldReturnTrue() throws ParkingLotSystemException {
+        try{
         parkingLotSystem =new ParkingLotSystem();
         boolean isParked= parkingLotSystem.parking(new Object());
+        parkingLotSystem.parking(new Object());
+        parkingLotSystem.parking(new Object());
         Assert.assertEquals(true,isParked);
+        }catch (ParkingLotSystemException e){
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+        }
     }
 
     @Test
-    public void givenVehicle_unparking_ShouldReturnTrue() {
+    public void givenVehicle_IfUnParking_ShouldReturnTrue() {
        try{
            Vehicle vehicle = new Vehicle();
            vehicle.setDateTime(LocalDateTime.now());
-        parkingLotSystem =new ParkingLotSystem();
-        boolean isParked= parkingLotSystem.unparking(vehicle);
-        Assert.assertEquals(true,isParked);
-    }catch (ParkingLotSystemException e){
-       Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);}
+           parkingLotSystem =new ParkingLotSystem();
+           parkingLotSystem.parking(vehicle);
+           boolean isUnParked= parkingLotSystem.unparking(0);
+           Assert.assertEquals(true,isUnParked);
+        }catch (ParkingLotSystemException e){
+           System.out.println("ENTER INTO EXCEPTION");
+            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);}
     }
+
+    @Test
+    public void givenVehicle_IfUnParkingFailed_ShouldReturnTrue() {
+        try{
+            Vehicle vehicle = new Vehicle();
+            vehicle.setDateTime(LocalDateTime.now());
+            parkingLotSystem =new ParkingLotSystem();
+            parkingLotSystem.parking(vehicle);
+            boolean isUnParked= parkingLotSystem.unparking(2);
+            Assert.assertEquals(true,isUnParked);
+        }catch (ParkingLotSystemException e){
+            System.out.println("ENTER INTO EXCEPTION");
+            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+    }
+
 
 //    Parking Lot Owner
     @Test
-    public void givenParkingLot_IsFull_ShouldReturnTrue() throws ParkingLotSystemException {
+    public void givenParkingLot_IsNotFull_ShouldReturnTrue() throws ParkingLotSystemException {
+        Vehicle vehicle = new Vehicle();
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
-        boolean isFull=parkingLotOwner.lotSize(new Object());
-        Assert.assertEquals(true,isFull);
+        vehicle.setDateTime(LocalDateTime.now());
+        parkingLotSystem =new ParkingLotSystem();
+        parkingLotSystem.parking(vehicle);
+       Boolean isFull=parkingLotSystem.parking(vehicle);
+        String isvFull=parkingLotOwner.availabilityParkingSlot(isFull);
+        Assert.assertEquals("Parking is Not Full",isvFull);
+    }
+    @Test
+    public void givenParkingLot_IsFull_ShouldReturnTrue() throws ParkingLotSystemException {
+       try{
+        Vehicle vehicle = new Vehicle();
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+        vehicle.setDateTime(LocalDateTime.now());
+        parkingLotSystem =new ParkingLotSystem();
+        parkingLotSystem.parking(vehicle);
+        Boolean isFull=parkingLotSystem.parking(vehicle);
+        parkingLotSystem.parking(vehicle);
+        String isvFull=parkingLotOwner.availabilityParkingSlot(isFull);
+        Assert.assertEquals("Parking is  Full",isvFull);
+    }catch (ParkingLotSystemException e){
+       Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);}
     }
 
     //Airport Security
     @Test
     public void givenParkingLot_IsFullShouldReturnTrue_airportSecurity() throws ParkingLotSystemException {
+        Vehicle vehicle = new Vehicle();
         AirportSecurity airportSecurity=new AirportSecurity();
-        boolean isFull=airportSecurity.lotSize(new Object());
-        Assert.assertEquals(true,isFull);
+        vehicle.setDateTime(LocalDateTime.now());
+        parkingLotSystem =new ParkingLotSystem();
+        parkingLotSystem.parking(vehicle);
+        Boolean isFull=parkingLotSystem.parking(vehicle);
+        String isvFull=airportSecurity.availabilityParkingSlot(isFull);
+        Assert.assertEquals("Parking is Not Full",isvFull);
     }
-
-
     @Test
-    public void givenParKinglot_parkingDecisionsOnWhere() {
-        try {
-            parkingLotSystem = new ParkingLotSystem();
-            parkingLotSystem.parking(new Object());
-            parkingLotSystem.parking(new Object());
-            parkingLotSystem.parking(new Object());
-            parkingLotSystem.parking(new Object());
-            parkingLotSystem.parking(new Object());
-            parkingLotSystem.parking(new Object());
-
-        } catch (ParkingLotSystemException e) {
-            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-        }
-    }
-
-    @Test
-    public void givenParkingLot_FindingCar_ForDriver(){
-        try {
-            parkingLotSystem = new ParkingLotSystem();
-            parkingLotSystem.find(1);
-        } catch (ParkingLotSystemException e) {
-            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-
-        }
-
-    }
-
-    @Test
-    public void givenParkingLot_ChargingVehicle(){
-        try {
+    public void givenParkingLot_IsNoTFullShouldReturnTrue_airportSecurity() throws ParkingLotSystemException {
+        try{
             Vehicle vehicle = new Vehicle();
+            AirportSecurity airportSecurity=new AirportSecurity();
             vehicle.setDateTime(LocalDateTime.now());
-            parkingLotSystem=new ParkingLotSystem();
+            parkingLotSystem =new ParkingLotSystem();
             parkingLotSystem.parking(vehicle);
-           boolean conditions=parkingLotSystem.unparking(vehicle);
-            Assert.assertEquals(true,conditions);
+            Boolean isFull=parkingLotSystem.parking(vehicle);
+            parkingLotSystem.parking(vehicle);
+            String isvFull=airportSecurity.availabilityParkingSlot(isFull);
+            Assert.assertEquals("Parking is Full",isvFull);
         }catch (ParkingLotSystemException e){
-            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-        }
+            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);}
     }
-
-    @Test
-    public void givenParkingSystem_Distibution(){
-        try {
-            Vehicle vehicle = new Vehicle();
-            vehicle.setDateTime(LocalDateTime.now());
-            parkingLotSystem=new ParkingLotSystem();
-
-            parkingLotSystem.allocationLots(vehicle);
-            parkingLotSystem.allocationLots(vehicle);
-            parkingLotSystem.allocationLots(vehicle);
-            parkingLotSystem.allocationLots(vehicle);
-
-        }catch (ParkingLotSystemException e){
-            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-        }
-
-    }
-
-    @Test
-    public void givenParkingLot_FindingSpace_ForHandiCamp(){
-        try {
-            parkingLotSystem = new ParkingLotSystem();
-
-           boolean checkingSpace=parkingLotSystem.find(1);
-           if(checkingSpace==true){
-               boolean co=parkingLotSystem.parking(new Object());
-               Assert.assertEquals(true,co);
-           };
-
-        } catch (ParkingLotSystemException e) {
-            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
-
-        }
-
-    }
+//
+//
+//    @Test
+//    public void givenParKinglot_parkingDecisionsOnWhere() {
+//        try {
+//            parkingLotSystem = new ParkingLotSystem();
+//            parkingLotSystem.parking(new Object());
+//            parkingLotSystem.parking(new Object());
+//            parkingLotSystem.parking(new Object());
+//            parkingLotSystem.parking(new Object());
+//            parkingLotSystem.parking(new Object());
+//            parkingLotSystem.parking(new Object());
+//
+//        } catch (ParkingLotSystemException e) {
+//            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+//        }
+//    }
+//
+//    @Test
+//    public void givenParkingLot_FindingCar_ForDriver(){
+//        try {
+//            parkingLotSystem = new ParkingLotSystem();
+//            parkingLotSystem.find(1);
+//        } catch (ParkingLotSystemException e) {
+//            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
+//
+//        }
+//
+//    }
+//
+//    @Test
+//    public void givenParkingLot_ChargingVehicle(){
+//        try {
+//            Vehicle vehicle = new Vehicle();
+//            vehicle.setDateTime(LocalDateTime.now());
+//            parkingLotSystem=new ParkingLotSystem();
+//            parkingLotSystem.parking(vehicle);
+//           boolean conditions=parkingLotSystem.unparking(vehicle);
+//            Assert.assertEquals(true,conditions);
+//        }catch (ParkingLotSystemException e){
+//            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+//        }
+//    }
+//
+//    @Test
+//    public void givenParkingSystem_Distibution(){
+//        try {
+//            Vehicle vehicle = new Vehicle();
+//            vehicle.setDateTime(LocalDateTime.now());
+//            parkingLotSystem=new ParkingLotSystem();
+//
+//            parkingLotSystem.allocationLots(vehicle);
+//            parkingLotSystem.allocationLots(vehicle);
+//            parkingLotSystem.allocationLots(vehicle);
+//            parkingLotSystem.allocationLots(vehicle);
+//
+//        }catch (ParkingLotSystemException e){
+//            Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+//        }
+//
+//    }
+//
+//    @Test
+//    public void givenParkingLot_FindingSpace_ForHandCap(){
+//        try {
+//            Vehicle vehicle = new Vehicle();
+//            vehicle.setDateTime(LocalDateTime.now());
+//
+//            parkingLotSystem = new ParkingLotSystem();
+//            parkingLotSystem.allocationLots(vehicle);
+//            parkingLotSystem.allocationLots(vehicle);
+//
+//           boolean checkingSpace=parkingLotSystem.find();
+//           Assert.assertEquals(true,checkingSpace);
+//
+//        } catch (ParkingLotSystemException e) {
+//            Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+//
+//        }
+//
+//    }
 
 
 

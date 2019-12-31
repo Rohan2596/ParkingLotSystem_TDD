@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class AirportSecurity  implements SignInformation{
+public class AirportSecurity  implements LotInformationObserver {
 
 
 }

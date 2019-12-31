@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="10" skipped="0" failures="2" errors="0" timestamp="2019-12-30T11:06:22" hostname="abc-Lenovo-V130-15IKB" time="0.026">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="9" skipped="0" failures="4" errors="0" timestamp="2019-12-31T06:52:44" hostname="abc-Lenovo-V130-15IKB" time="0.017">
   <properties/>
-  <testcase name="givenParkingLot_IsFull_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.004"/>
-  <testcase name="givenParkingLot_FindingSpace_ForHandiCamp" classname="com.bridgelabz.ParkingLotTest" time="0.002">
-    <failure message="java.lang.AssertionError: expected:&lt;NOT_FOUND&gt; but was:&lt;PARKING_LOT_FULL&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;NOT_FOUND&gt; but was:&lt;PARKING_LOT_FULL&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:118)
-	at org.junit.Assert.assertEquals(Assert.java:144)
-	at com.bridgelabz.ParkingLotTest.givenParkingLot_FindingSpace_ForHandiCamp(ParkingLotTest.java:126)
+  <testcase name="givenParkingLot_IsFull_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.012"/>
+  <testcase name="givenParkingLot_IsNoTFullShouldReturnTrue_airportSecurity" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
+  <testcase name="givenVehicle_IfParked_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
+  <testcase name="givenGreetingMessage_ShouldReturn_WelcomeMessage" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
+  <testcase name="givenParkingLot_IsNotFull_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.002">
+    <failure message="com.bridgelabz.ParkingLotSystemException" type="com.bridgelabz.ParkingLotSystemException">com.bridgelabz.ParkingLotSystemException
+	at com.bridgelabz.ParkingLotSystem.parking(ParkingLotSystem.java:14)
+	at com.bridgelabz.ParkingLotTest.givenParkingLot_IsNotFull_ShouldReturnTrue(ParkingLotTest.java:78)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -58,17 +58,123 @@
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
-  <testcase name="givenParkingLot_ChargingVehicle" classname="com.bridgelabz.ParkingLotTest" time="0.012"/>
-  <testcase name="givenParkingLot_FindingCar_ForDriver" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
-  <testcase name="givenGreetingMessage_ShouldReturn_WelcomeMessage" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
-  <testcase name="givenVehicle_parking_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.0"/>
-  <testcase name="givenVehicle_unparking_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenParKinglot_parkingDecisionsOnWhere" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
-  <testcase name="givenParkingSystem_Distibution" classname="com.bridgelabz.ParkingLotTest" time="0.003"/>
-  <testcase name="givenParkingLot_IsFullShouldReturnTrue_airportSecurity" classname="com.bridgelabz.ParkingLotTest" time="0.001">
+  <testcase name="givenVehicle_IfUnParking_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.0">
+    <failure message="java.lang.AssertionError: expected:&lt;PARKING_LOT_FULL&gt; but was:&lt;NOT_FOUND&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;PARKING_LOT_FULL&gt; but was:&lt;NOT_FOUND&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bridgelabz.ParkingLotTest.givenVehicle_IfUnParking_ShouldReturnTrue(ParkingLotTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <testcase name="givenVehicle_IfParkedFailed_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
+  <testcase name="givenVehicle_IfUnParkingFailed_ShouldReturnTrue" classname="com.bridgelabz.ParkingLotTest" time="0.0">
+    <failure message="java.lang.AssertionError: expected:&lt;PARKING_LOT_FULL&gt; but was:&lt;NOT_FOUND&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;PARKING_LOT_FULL&gt; but was:&lt;NOT_FOUND&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.bridgelabz.ParkingLotTest.givenVehicle_IfUnParkingFailed_ShouldReturnTrue(ParkingLotTest.java:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:175)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:157)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+</failure>
+  </testcase>
+  <testcase name="givenParkingLot_IsFullShouldReturnTrue_airportSecurity" classname="com.bridgelabz.ParkingLotTest" time="0.0">
     <failure message="com.bridgelabz.ParkingLotSystemException" type="com.bridgelabz.ParkingLotSystemException">com.bridgelabz.ParkingLotSystemException
-	at com.bridgelabz.SignInformation.lotSize(SignInformation.java:11)
-	at com.bridgelabz.ParkingLotTest.givenParkingLot_IsFullShouldReturnTrue_airportSecurity(ParkingLotTest.java:49)
+	at com.bridgelabz.ParkingLotSystem.parking(ParkingLotSystem.java:14)
+	at com.bridgelabz.ParkingLotTest.givenParkingLot_IsFullShouldReturnTrue_airportSecurity(ParkingLotTest.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,47 +225,9 @@
 </failure>
   </testcase>
   <system-out><![CDATA[1
-java.lang.Object@656ac378
 2
-com.bridgelabz.Slots@2b9c6177
-true
-22 32
-20
-java.lang.Object@656ac378
-3
-com.bridgelabz.Slots@2b9c6177
-false
-23 33
-20
-4
-5
-6
-7
-8
-9
-java.lang.Object@656ac378
-com.bridgelabz.Vehicle@57360144
-java.lang.Object@58562c15
-java.lang.Object@100979b1
-java.lang.Object@77d266d5
-java.lang.Object@123553b3
-java.lang.Object@7b6ae364
-java.lang.Object@20f5d949
-java.lang.Object@4475f74c
-10
-Parking att:-10
-java.lang.Object@656ac378
-com.bridgelabz.Vehicle@57360144
-com.bridgelabz.Vehicle@7c659cba
-java.lang.Object@100979b1
-java.lang.Object@77d266d5
-java.lang.Object@123553b3
-java.lang.Object@7b6ae364
-java.lang.Object@20f5d949
-java.lang.Object@4475f74c
-com.bridgelabz.Vehicle@7c659cba
-10
-10
+ENTER INTO EXCEPTION
+ENTER INTO EXCEPTION
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

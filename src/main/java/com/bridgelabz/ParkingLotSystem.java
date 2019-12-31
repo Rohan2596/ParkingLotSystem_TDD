@@ -17,7 +17,7 @@ public class ParkingLotSystem {
 
 
 
-    public Boolean unparking(Vehicle vehicle) throws ParkingLotSystemException {
+    public Boolean unparking(int vehicle) throws ParkingLotSystemException {
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
         try {
             parkingLotOwner.unparking(vehicle);
@@ -53,4 +53,14 @@ public class ParkingLotSystem {
 
     }
 
+    public boolean find() throws ParkingLotSystemException {
+        ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
+
+        try {
+            parkingLotOwner.find();
+            return true;
+        } catch (ParkingLotSystemException e) {
+            throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
+        }
+    }
 }
