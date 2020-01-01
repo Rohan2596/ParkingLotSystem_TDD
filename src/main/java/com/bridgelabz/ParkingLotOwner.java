@@ -13,13 +13,10 @@ public class ParkingLotOwner  implements LotInformationObserver {
             slots.getMap().put(1,vehicle);
             parking(vehicle);
             lots=2;
-            System.out.println("Parking att:-"+ slots.getCount());
         }
         else{
             slots.getMap().put(2,vehicle);
             parking(vehicle);
-            System.out.println("Parking att:-"+ slots.getCount());
-
             lots=1;}
 
     }
@@ -43,8 +40,6 @@ public class ParkingLotOwner  implements LotInformationObserver {
         Slots slots=Slots.getSlots();
         System.out.println(Slots.getSlots().toString());
         while (slots.getMap().containsKey(vehicle)) {
-            System.out.println(slots.getMap().containsKey(vehicle));
-//            charging(true,vehicle.getDateTime());
             slots.getMap().remove(vehicle);
             availabilityParkingSlot(true);
             return true;
@@ -57,12 +52,9 @@ public class ParkingLotOwner  implements LotInformationObserver {
         if(conditions==true){
             int time1=LocalDateTime.now().getSecond();
             int time2=time.getSecond()+10;
-            System.out.println(time1+" "+time2);
             value=2*(Math.abs(time1-time2));
-            System.out.println(value);
             return value;
         }
-
         return -1;
     }
 
@@ -74,9 +66,7 @@ public class ParkingLotOwner  implements LotInformationObserver {
 
     public boolean find(Integer key) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
-
         for(int i=0;i<=slots.getCount();i++){
-            System.out.println(slots.getMap().get(i));
             if(slots.getMap().containsKey(key))return true;
         }
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
@@ -87,8 +77,6 @@ public class ParkingLotOwner  implements LotInformationObserver {
         Slots slots=Slots.getSlots();
 
         for(int i=0;i<=slots.getMap().size();i++){
-            System.out.println(slots.getMap().get(i));
-
             if(slots.getMap().containsValue(null))return true;
         }
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);

@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45008cc3-651f-4ce9-bcf9-364411903b1a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/bridgelabz/ParkingLotTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/bridgelabz/ParkingLotTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.ParkingLotTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.bridgelabz.ParkingLotTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.bridgelabz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.ParkingLotTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.bridgelabz.ParkingLotTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,13 +77,33 @@
       <recent name="com.bridgelabz" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ParkingLotTest.givenParkingSystem_DistributionEvenlys">
-    <configuration name="ParkingLotTest.givenParKinglot_parkingDecisionsOnWhere_ToParkLot" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ParkingLotTest.givenGreetingMessage_ShouldReturn_WelcomeMessage">
+    <configuration name="ParkingLotTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParKinglot_parkingDecisionsOnWhere_ToParkLot&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ParkingLotTest.givenGreetingMessage_ShouldReturn_WelcomeMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenGreetingMessage_ShouldReturn_WelcomeMessage&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -99,32 +138,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ParkingLotTest.givenParkingLot_FindingCar_ForDriver" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParkingLotTest.givenParkingLot_FindingSpace_ForHandCap" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingLot_FindingCar_ForDriver&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="ParkingLotTest.givenParkingSystem_Distibution" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingSystem_Distibution&quot;" />
+        <option name="scriptParameters" value="--tests &quot;com.bridgelabz.ParkingLotTest.givenParkingLot_FindingSpace_ForHandCap&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -161,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ParkingLotTest.givenGreetingMessage_ShouldReturn_WelcomeMessage" />
+        <item itemvalue="Gradle.ParkingLotTest" />
+        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_FindingSpace_ForHandCap" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingSystem_DistributionEvenlys" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingSystem_Distibution" />
         <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_ChargingVehicle" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParkingLot_FindingCar_ForDriver" />
-        <item itemvalue="Gradle.ParkingLotTest.givenParKinglot_parkingDecisionsOnWhere_ToParkLot" />
       </list>
     </recent_temporary>
   </component>
@@ -211,38 +230,38 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1577529560558" />
-    <state width="1804" height="253" key="GridCell.Tab.0.bottom" timestamp="1577779773197">
+    <state width="1804" height="267" key="GridCell.Tab.0.bottom" timestamp="1577788241389">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="253" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577779773197" />
-    <state width="1804" height="253" key="GridCell.Tab.0.center" timestamp="1577779773195">
+    <state width="1804" height="267" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577788241389" />
+    <state width="1804" height="267" key="GridCell.Tab.0.center" timestamp="1577788241386">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="253" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577779773195" />
-    <state width="1804" height="253" key="GridCell.Tab.0.left" timestamp="1577779773194">
+    <state width="1804" height="267" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577788241386" />
+    <state width="1804" height="267" key="GridCell.Tab.0.left" timestamp="1577788241385">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="253" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577779773194" />
-    <state width="1804" height="253" key="GridCell.Tab.0.right" timestamp="1577779773196">
+    <state width="1804" height="267" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577788241385" />
+    <state width="1804" height="267" key="GridCell.Tab.0.right" timestamp="1577788241387">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="253" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577779773196" />
-    <state width="1804" height="339" key="GridCell.Tab.1.bottom" timestamp="1577777968565">
+    <state width="1804" height="267" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577788241387" />
+    <state width="1804" height="330" key="GridCell.Tab.1.bottom" timestamp="1577787770367">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="339" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577777968565" />
-    <state width="1804" height="339" key="GridCell.Tab.1.center" timestamp="1577777968564">
+    <state width="1804" height="330" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1577787770367" />
+    <state width="1804" height="330" key="GridCell.Tab.1.center" timestamp="1577787770367">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="339" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577777968564" />
-    <state width="1804" height="339" key="GridCell.Tab.1.left" timestamp="1577777968563">
+    <state width="1804" height="330" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1577787770367" />
+    <state width="1804" height="330" key="GridCell.Tab.1.left" timestamp="1577787770366">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="339" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577777968563" />
-    <state width="1804" height="339" key="GridCell.Tab.1.right" timestamp="1577777968564">
+    <state width="1804" height="330" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1577787770366" />
+    <state width="1804" height="330" key="GridCell.Tab.1.right" timestamp="1577787770367">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="339" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577777968564" />
+    <state width="1804" height="330" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1577787770367" />
     <state x="484" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1577771346330">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -268,28 +287,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>178</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java</url>
           <line>10</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java</url>
-          <line>47</line>
+          <line>41</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -299,78 +303,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>17</line>
+          <line>16</line>
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>195</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>194</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java</url>
-          <line>56</line>
+          <line>50</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotSystem.java</url>
-          <line>59</line>
+          <line>53</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>86</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="55" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>29</line>
+          <line>26</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>30</line>
+          <line>27</line>
           <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>64</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/bridgelabz/ParkingLotTest.java</url>
-          <line>78</line>
-          <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/LotInformationObserver.java</url>
@@ -384,7 +338,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/bridgelabz/ParkingLotOwner.java</url>
-          <line>35</line>
+          <line>32</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">

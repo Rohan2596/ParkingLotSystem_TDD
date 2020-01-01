@@ -48,7 +48,6 @@ public class ParkingLotTest {
            boolean isUnParked= parkingLotSystem.unparking(0);
            Assert.assertEquals(true,isUnParked);
         }catch (ParkingLotSystemException e){
-           System.out.println("ENTER INTO EXCEPTION");
             Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);}
     }
 
@@ -62,13 +61,10 @@ public class ParkingLotTest {
             boolean isUnParked= parkingLotSystem.unparking(2);
             Assert.assertEquals(true,isUnParked);
         }catch (ParkingLotSystemException e){
-            System.out.println("ENTER INTO EXCEPTION");
             Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
         }
     }
 
-
-//    Parking Lot Owner
     @Test
     public void givenParkingLot_IsNotFull_ShouldReturnTrue() throws ParkingLotSystemException {
         Vehicle vehicle = new Vehicle();
@@ -80,6 +76,7 @@ public class ParkingLotTest {
         String isvFull=parkingLotOwner.availabilityParkingSlot(isFull);
         Assert.assertEquals("Parking is Not Full",isvFull);
     }
+
     @Test
     public void givenParkingLot_IsFull_ShouldReturnTrue() throws ParkingLotSystemException {
        try{
@@ -108,6 +105,7 @@ public class ParkingLotTest {
         String isvFull=airportSecurity.availabilityParkingSlot(isFull);
         Assert.assertEquals("Parking is Not Full",isvFull);
     }
+
     @Test
     public void givenParkingLot_IsNoTFullShouldReturnTrue_airportSecurity() throws ParkingLotSystemException {
         try{
@@ -149,9 +147,7 @@ public class ParkingLotTest {
             parkingLotSystem.find(1);
         } catch (ParkingLotSystemException e) {
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-
         }
-
     }
 
     @Test
@@ -160,7 +156,7 @@ public class ParkingLotTest {
             Vehicle vehicle = new Vehicle();
             vehicle.setDateTime(LocalDateTime.now());
             parkingLotSystem=new ParkingLotSystem();
-          boolean charged =parkingLotSystem.parking(vehicle);
+            boolean charged =parkingLotSystem.parking(vehicle);
             Assert.assertEquals(true,charged);
         }catch (ParkingLotSystemException e){
             Assert.assertEquals(e.exceptionTypes,ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
@@ -193,15 +189,17 @@ public class ParkingLotTest {
             parkingLotSystem.allocationLots(vehicle);
             parkingLotSystem.allocationLots(vehicle);
             boolean checkingSpace=parkingLotSystem.find();
-           Assert.assertEquals(true,checkingSpace);
-
+            Assert.assertEquals(true,checkingSpace);
         } catch (ParkingLotSystemException e) {
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
-
         }
-
     }
 
+    @Test
+    public void givenParkingLot_FindingSpaceForLargeVehicles_shouldReturnTrue(){
+        Vehicle largeVehicle = new Vehicle();
+        parkingLotSystem = new ParkingLotSystem();
+        parkingLotSystem.parkLargevehicle(largeVehicle);
 
-
+    }
 }
