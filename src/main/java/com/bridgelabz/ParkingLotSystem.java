@@ -47,11 +47,11 @@ public class ParkingLotSystem {
 
     }
 
-    public boolean find() throws ParkingLotSystemException {
+    public boolean find(Vehicle vehicle) throws ParkingLotSystemException {
         ParkingLotOwner parkingLotOwner=new ParkingLotOwner();
 
         try {
-            parkingLotOwner.find();
+            parkingLotOwner.find(vehicle);
             return true;
         } catch (ParkingLotSystemException e) {
             throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);

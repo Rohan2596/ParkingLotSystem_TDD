@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import sun.awt.OverrideNativeWindowHandle;
+
 import java.time.LocalDateTime;
 import java.util.Map;
 
@@ -27,18 +29,15 @@ public class ParkingLotOwner  implements LotInformationObserver {
         if (isFull==true &&slots.getCount()!=2) {
             slots.getMap().put(slots.getCount(), vehicle);
             slots.setCount();
-            System.out.println(slots.getCount());
             return true;
         }
         availabilityParkingSlot(false);
-
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.PARKING_LOT_FULL);
     }
 
 
     public boolean unparking(int vehicle) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
-        System.out.println(Slots.getSlots().toString());
         while (slots.getMap().containsKey(vehicle)) {
             slots.getMap().remove(vehicle);
             availabilityParkingSlot(true);
@@ -60,7 +59,7 @@ public class ParkingLotOwner  implements LotInformationObserver {
 
     public void display(Map<Integer, Object> map){
         for(int i=0;i<map.size();i++){
-            System.out.println(map.get(i));
+           // System.out.println(map.get(i));
         }
     }
 
@@ -72,12 +71,11 @@ public class ParkingLotOwner  implements LotInformationObserver {
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
     }
 
-    public boolean find() throws ParkingLotSystemException {
-
+    public boolean find(Vehicle vehicle) throws ParkingLotSystemException {
         Slots slots=Slots.getSlots();
 
         for(int i=0;i<=slots.getMap().size();i++){
-            if(slots.getMap().containsValue(null))return true;
+            if(slots.getMap().containsValue(vehicle))return true;
         }
         throw  new ParkingLotSystemException(ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
 

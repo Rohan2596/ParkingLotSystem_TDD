@@ -6,7 +6,6 @@ public interface LotInformationObserver {
        if(condition==false){
            return "Parking slots is full";
        }
-        System.out.println("Parking is not full");
         return "Parking is Not Full";
     }
 }

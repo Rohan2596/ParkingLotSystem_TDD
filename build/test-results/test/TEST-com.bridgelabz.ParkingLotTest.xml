@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-31T10:27:05" hostname="abc-Lenovo-V130-15IKB" time="0.001">
+<testsuite name="com.bridgelabz.ParkingLotTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-01-01T06:10:10" hostname="abc-Lenovo-V130-15IKB" time="0.013">
   <properties/>
-  <testcase name="givenGreetingMessage_ShouldReturn_WelcomeMessage" classname="com.bridgelabz.ParkingLotTest" time="0.001"/>
+  <testcase name="givenParkingLot_FindingSpace_ForHandCap" classname="com.bridgelabz.ParkingLotTest" time="0.013"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

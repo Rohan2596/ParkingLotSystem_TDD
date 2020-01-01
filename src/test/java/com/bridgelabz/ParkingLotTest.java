@@ -188,7 +188,7 @@ public class ParkingLotTest {
             parkingLotSystem.allocationLots(vehicle);
             parkingLotSystem.allocationLots(vehicle);
             parkingLotSystem.allocationLots(vehicle);
-            boolean checkingSpace=parkingLotSystem.find();
+            boolean checkingSpace=parkingLotSystem.find(vehicle);
             Assert.assertEquals(true,checkingSpace);
         } catch (ParkingLotSystemException e) {
             Assert.assertEquals(e.exceptionTypes, ParkingLotSystemException.ExceptionTypes.NOT_FOUND);
